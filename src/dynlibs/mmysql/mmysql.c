@@ -76,9 +76,9 @@ void dbresult_finalize(value dbresval)
   MYSQL_ROW_OFFSET* index = DBresultindex_val(dbresval);
   if (dbres != NULL) {
     mysql_free_result(dbres);
-    DBresult_val(dbresval) = NULL;
+    DBresult_val(dbresval) == NULL;
     stat_free((char*)index);
-    DBresultindex_val(dbresval) = NULL;
+    DBresultindex_val(dbresval) == NULL;
   }
 }
 
