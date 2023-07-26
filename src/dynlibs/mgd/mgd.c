@@ -121,7 +121,7 @@ EXTERNML value mgd_tostdoutpng(value im)
 {
   fprintf(stdout, "Content-type: image/png\n\n");   
   gdImagePng(Image_val(im), stdout);
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
   fflush(stdout);
 #else
   flush(stdout);
